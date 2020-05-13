@@ -26,6 +26,7 @@ public class ChangeForOneEuroGame {
         twentyCent = 0.2 * scanner.nextInt();
         System.out.println("Please enter how many 50 cents you have: ");
         fiftyCent = 0.5 * scanner.nextInt();
+        scanner.close();
 
         total = oneCent + twoCent + fiveCent + tenCent + twentyCent + fiftyCent;
         //total = total / 100;
