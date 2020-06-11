@@ -20,11 +20,11 @@ public class Coin {
 
         if(random.nextBoolean()){
             setSide(HEAD);
-            System.out.println("Coin side is HEAD" );
+            System.out.println("The coin landed on " + HEAD);
         }
         else{
             setSide(TAIL);
-            System.out.println("Coin side is TAIL");
+            System.out.println("The coin landed on " + TAIL);
         }
         return getSide();
     }
