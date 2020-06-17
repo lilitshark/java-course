@@ -26,8 +26,8 @@ public class PasswordValidator {
         String specialChars = "~`!@#$%^&*()-_=+\\|[{]};:'\",<.>/?";
         int minCharacter = 8;
         //Pattern pattern = Pattern.compile("[^a-z0-9]", Pattern.CASE_INSENSITIVE);
-        boolean uppercasePresent = false;
-        boolean specialCharPresent = false;
+        boolean isUppercasePresent = false;
+        boolean isSpecialCharPresent = false;
 
 
         if (newPassword.length() >= minCharacter && !newPassword.contains(oldPassword)
@@ -35,15 +35,15 @@ public class PasswordValidator {
             for (int i = 0; i < newPassword.length(); i++) {
                 char currentCharacter = newPassword.charAt(i);
                 if(Character.isUpperCase(currentCharacter)){
-                    uppercasePresent = true;
+                    isUppercasePresent = true;
                     continue;
                 }
                 else if(specialChars.contains(String.valueOf(currentCharacter))){
-                    specialCharPresent = true;
+                    isSpecialCharPresent = true;
                     continue;
                 }
             }
-            return uppercasePresent && specialCharPresent;
+            return isUppercasePresent && isSpecialCharPresent;
         }
         else return false;
     }
